@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include<math.h>
+#include <math.h>
 
 
 int main()
@@ -8,15 +8,15 @@ int main()
     int i ;
     double a,b,c,d,x1,x2;
     
-
-       
     do
     {
     
     printf("vvedite A: ");
     scanf("%lf", &a);
+        
     printf("vvedite B: ");
     scanf("%lf", &b);
+        
     printf("vvedite C: ");
     scanf("%lf", &c);
 
@@ -41,14 +41,16 @@ int main()
             x1=(-b/(2*a));
             printf("x1= %lf \n");
         }
-        if (d<0)
         
+        if (d<0)
+        {
         printf("net korney\n");
-
+        }
    
     printf("prodolzhit' 1- da, 2 - net: ");
     scanf("%d",&i);
     }
+        
     while(i==1);
 return 0;
 }
