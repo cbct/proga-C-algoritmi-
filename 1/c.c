@@ -4,7 +4,6 @@
 
 int main()
 {
-
     int i ;
     double a,b,c,d,x1,x2;
     
@@ -47,7 +46,7 @@ int main()
         printf("net korney\n");
         }
    
-    printf("prodolzhit' 1- da, 2 - net: ");
+    printf("prodolzhit?' 1- da, 2 - net: ");
     scanf("%d",&i);
     }
         
