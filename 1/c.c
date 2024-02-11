@@ -22,7 +22,6 @@ int main()
     printf("a= %lf b= %lf c= %lf \n", a, b, c);
 
     
-    
 
     d=b*b-4*a*c;
     printf("d= %lf \n", d);
