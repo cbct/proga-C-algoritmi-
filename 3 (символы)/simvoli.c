@@ -17,7 +17,7 @@ int main()
     int ogr;
     printf("Vvedite ogranichenie simvolov: ");
     scanf("%d", &ogr);
-    fflush(stdin);
+    fflush(stdin);   # чтобы не сохранялась пустая строка в буфере
 
 
     char *s = (char *)malloc(ogr * sizeof(char));
