@@ -16,9 +16,9 @@ int main()
 
     for(int i=0; i<line; i++)
     {
-        matrix[i] = (double *)malloc(stolb * sizeof(double));                #динамическая память
+        matrix[i] = (double *)malloc(stolb * sizeof(double));                //*динамическая память
     }
-# -------------------------------------------------------------------------------------------------
+//* -------------------------------------------------------------------------------------------------
     for(int l=0; l<line; l++)
     {
         printf("Vvedite znachenie %d stroci: ", l+1);
