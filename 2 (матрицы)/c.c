@@ -5,7 +5,6 @@ int main()
 {
     int line, stolb;
     double **matrix;
-    printf("   -----                                                                   \n");
 
     printf("Kakoi razmer matrici vi hotite? \n 1 chislo - kolichestvo stroc 2 chislo - colichestvo stolbcov \n kolichestvo strok: ");
     scanf("%d", &line);
