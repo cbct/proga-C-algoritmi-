@@ -16,9 +16,9 @@ int main()
 
     for(int i=0; i<line; i++)
     {
-        matrix[i] = (double *)malloc(stolb * sizeof(double));                //*динамическая память
+        matrix[i] = (double *)malloc(stolb * sizeof(double));
     }
-//* -------------------------------------------------------------------------------------------------
+
     for(int l=0; l<line; l++)
     {
         printf("Vvedite znachenie %d stroci: ", l+1);
@@ -27,8 +27,6 @@ int main()
             scanf("%lf", &matrix[l][c]);
         }
     }
-
-    printf("--------------------------------------------------------------------------- \n");
 
     printf("Vasha matrica: \n");
     for(int l=0; l<line; l++)
@@ -66,7 +64,7 @@ int main()
         stolB -= 1;
         }
         
-        if (stolB <= 0 && i > line) { // add this check
+        if (stolB <= 0 && i > line) { 
         sumR += matrix[i][stolB];
         stolB -= 1;
         }
@@ -107,7 +105,6 @@ int main()
     getchar();
     return 0;
 }
-
 
 
 
