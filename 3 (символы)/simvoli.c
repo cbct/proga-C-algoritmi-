@@ -5,7 +5,8 @@
 void UPER(char *s, int ogr)
 {
     for(int i= 0; i < ogr; i++){
-        s[i] = toupper((unsigned char)s[i]);
+        if(s[i] == 'a' || s[i] == 'b')
+        s[i] = toupper(s[i]);
 
     }
 }
@@ -17,19 +18,17 @@ int main()
     int ogr;
     printf("Vvedite ogranichenie simvolov: ");
     scanf("%d", &ogr);
-    fflush(stdin);   # чтобы не сохранялась пустая строка в буфере
+    fflush(stdin);
 
-
+    
     char *s = (char *)malloc(ogr * sizeof(char));
 
 
     if (s == NULL) 
     {
-        fprintf(stderr, "RAM ERROR\n");
+        printf("RAM ERROR\n");
         return 1;
     }
-
-
 
 
     printf("Vasha stroca: ");
