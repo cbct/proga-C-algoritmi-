@@ -72,7 +72,6 @@ int main()
 //     char *s = (char *)malloc(ogr * sizeof(char));
 
 //     printf("Vasha stroca: ");
-
 //     fgets(s, ogr + 1,  stdin);
 //     s[ogr] = '\0';
 //     printf("Vasha stroca low: %s \n", s);
