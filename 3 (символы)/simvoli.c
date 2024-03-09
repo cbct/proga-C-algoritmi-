@@ -6,8 +6,10 @@ void UPER(char *s, int ogr)
 {
     for(int i= 0; i < ogr; i++){
         if(s[i] == 'a' || s[i] == 'b')
-        s[i] = toupper(s[i]);
-
+            s[i] = toupper(s[i]);
+        
+        if(s[i] == '!')
+            s[i] ='?';
     }
 }
 
@@ -32,6 +34,7 @@ int main() {
 
     return 0;
 }
+
 
 
 
