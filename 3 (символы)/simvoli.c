@@ -19,16 +19,8 @@ int main()
     printf("Vvedite ogranichenie simvolov: ");
     scanf("%d", &ogr);
     fflush(stdin);
-
     
     char *s = (char *)malloc(ogr * sizeof(char));
-
-
-    if (s == NULL) 
-    {
-        printf("RAM ERROR\n");
-        return 1;
-    }
 
 
     printf("Vasha stroca: ");
