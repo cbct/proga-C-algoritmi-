@@ -8,16 +8,13 @@ void F_mult(int line_A, int stolb_A, int line_B, int stolb_B, double **matrix_A,
         return;
     }
 
-    printf("A * B = C\n");
     for (int i = 0; i < line_A; i++) {
         for (int j = 0; j < stolb_B; j++) {
             matrix_C[i][j] = 0;
             for (int k = 0; k < stolb_A; k++) {
                 matrix_C[i][j] += matrix_A[i][k] * matrix_B[k][j];        //вычисление квадрата матрицы
             }
-        printf("%.2lf ", matrix_C[i][j]);
         }
-    printf("\n");
     }
 }
 
@@ -59,6 +56,15 @@ void F_summa(int line_A, int stolb_A, int line_B, int stolb_B, double **matrix_A
         }
         printf("\n");
     } 
+}
 
+void print_matrix(int line_A, int stolb_A, double **matrix_C){
     
+    printf("Polychiloc: \n");
+    for(int l=0; l<line_A; l++){
+        for(int c=0; c<stolb_A; c++){                     //получившаяся матрица
+            printf("%.2lf ", matrix_C[l][c]);
+        }
+        printf("\n");
+    }
 }
