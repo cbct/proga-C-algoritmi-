@@ -142,6 +142,11 @@ int main()
             if(deystvie[i] == '*'){
                 ycazatel = F_mult;
                 ycazatel(line_A, stolb_A, line_B, stolb_B, matrix_A, matrix_B, matrix_C);
+ 
+                print_matrix(line_A, stolb_A, matrix_C);
+                
+                
+                
             }
             else
                 break;
@@ -149,9 +154,6 @@ int main()
         printf("eshe raz? (1 - yes, 2 - no): ");
         scanf("%i", &vihod);
     }
-
-
-
 
 
 
@@ -177,7 +179,6 @@ int main()
     getchar();
     return 0;
 }
-
 
 
 
