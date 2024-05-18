@@ -20,13 +20,9 @@
 
 
 void print_week(struct tm *time){
-    printf("Day on week: %s \n", 
-           time->tm_wday == 0 ? "Sunday" :                  //понедельник
-           time->tm_wday == 1 ? "Monday" :                  //вторник
-           time->tm_wday == 2 ? "Tuesday" :                 //среда
-           time->tm_wday == 3 ? "Wednesday" :               //четверг
-           time->tm_wday == 4 ? "Thursday" :                //пятница
-           time->tm_wday == 5 ? "Friday" : "Saturday");     //суббота     воскресенье
+    char day[N];
+    strftime(day, sizeof(day), "%A", time);
+    printf("Day on week: %s \n", day);
 
 }
 
@@ -73,22 +69,18 @@ int main(){
 
         scanf("%s", input);
         
-        if((strlen(input) == 4) && (strcmp(input, "nast") != 0)){           // календарь за год
+        if((strlen(input) == 4) && (strcmp(input, "nast") != 0)){           // календарь месяцев и дней за год
             int year = atoi(input);
-            for(int i = 1; i <= 12; i++){
-                printf("%i %s(%i)\n", year, i == 1 ? "January" :                  
-                                            i == 2 ? "February" :                  
-                                            i == 3 ? "March" :                 
-                                            i == 4 ? "April" :               
-                                            i == 5 ? "May" :              
-                                            i == 6 ? "June" : 
-                                            i == 7 ? "July" :                  
-                                            i == 8 ? "August" :                  
-                                            i == 9 ? "September" :                 
-                                            i == 10 ? "October" :               
-                                            i == 11 ? "November" : "December", i);
+            for (int i = 1; i <= 12; i++) {
+                struct tm time;
+                time.tm_year = year - 1900;
+                time.tm_mon = i - 1;
+                time.tm_mday = 1;
+                char month_name[N];
+                strftime(month_name, sizeof(N), "%B", &time);
+                printf("%i %s (%i)\n", year, month_name, i);
                 mon_day(year, i);
-            }                      
+            }                    
 
 
         }else if(strlen(input) == 7){                   // выводит календарь дней за месяц
@@ -127,7 +119,6 @@ int main(){
 
     return 0;
 }
-
 
 
 
