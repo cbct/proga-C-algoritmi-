@@ -117,6 +117,99 @@ int main(){
 
 
 
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
+// #include <time.h>
+// #include <unistd.h>
+
+// #define N 100
+
+
+
+
+// int main(){
+    
+//     double time_spent = 0.0;
+//     clock_t begin = clock();
+
+//     int n;
+//     int **matrix_A, **matrix_B ;
+
+//     printf("vvedite razmer matrici n na n: ");
+//     scanf("%i", &n);
+//     printf("Razmer matrici: %i na %i\n", n, n);
+
+//     matrix_A = (int **)malloc(n * sizeof(int *));
+//     matrix_B = (int **)malloc(n * sizeof(int *));
+    
+//     for(int i = 0; i < n; i++){
+//         matrix_A[i] = (int *)malloc(n * sizeof(int));
+//     }
+    
+//     for(int i = 0; i < n; i++){
+//         matrix_B[i] = (int *)malloc(n * sizeof(int));
+//     }
+    
+    
+    
+//     FILE *new;
+//     new = fopen("input.txt", "w");
+    
+//     for(int i = 0; i < n; i++){
+//         for(int j = 0; j < n; j++){
+//             int chislo = rand() % (N + 1);
+//             matrix_A[i][j] = chislo;
+//             fprintf(new, "%i ", matrix_A[i][j]);
+//         }
+//         fprintf(new, "\n");
+//     }
+    
+//     for(int i = 0; i < n; i++){
+//         for(int j = 0; j < n; j++){
+//             int chislo = rand() % (N + 1);
+//             matrix_B[i][j] = chislo;
+//             fprintf(new, "%i ", matrix_B[i][j]);
+//         }
+//         fprintf(new, "\n");
+//     }
+    
+    
+//     fclose(new);
+    
+    
+    
+    
+    
+    
+//     // FILE *new;
+//     // new = fopen("input.txt", "w");
+    
+    
+    
+    
+//     clock_t end = clock();
+//     time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
+ 
+//     printf("Time is %f seconds", time_spent);
+    
+    
+    
+
+//     for(int i = 0; i < n; i++){
+//         free(matrix_A[i]);
+//     }
+//     free(matrix_A);
+    
+//     for(int i = 0; i < n; i++){
+//         free(matrix_B[i]);
+//     }
+//     free(matrix_B);
+    
+    
+
+//     return 0;
+// }
 
 
 
